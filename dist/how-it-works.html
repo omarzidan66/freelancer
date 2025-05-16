@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Skill Match Works - Your Guide to Reliable Home Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <style>
+      /* Custom scrollbar for better aesthetics (optional) */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; /* slate-300 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; /* slate-400 */
+      }
+      /* Define Iris color variables if they come from a config, for clarity in CSS if needed */
+      /* This is illustrative; actual colors are from your output.css */
+      :root {
+        --iris-color: #5d3eff; /* Example Iris color */
+        --iris-dark-color: #432cbf; /* Example Iris Dark color */
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-slate-50 text-gray-800 antialiased">
+    <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="/"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors"
+              aria-label="Skill Match Home">
+              <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
+            </a>
+            <ul
+              class="hidden md:flex items-center space-x-2 lg:space-x-6 ml-8 lg:ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-search mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Emergency.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-plus-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+Emergency                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-Iris px-3 py-2 rounded-md text-base font-semibold transition-colors group"
+                  aria-current="page">
+                  <i
+                    class="fa fa-info-circle mr-2 text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Categories
+            </a>
+            <a
+              href="#"
+              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+              href="#"
+              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-slate-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              ><i
+                class="fa fa-search mr-3 text-gray-400 group-hover:text-Iris transition-colors"
+                aria-hidden="true"></i
+              >Find Talent</a
+            >
+          </li>
+          <li>
+            <a
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              >
+Emergency
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-Iris bg-slate-100 block px-3 py-3 rounded-md text-base font-semibold transition-colors group"
+              aria-current="page"
+              ><i
+                class="fa fa-info-circle mr-3 text-Iris transition-colors"
+                aria-hidden="true"></i
+              >How it works</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors"
+              >Browse Categories</a
+            >
+          </li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out"
+              >Login</a
+            >
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="py-12 md:py-16 bg-slate-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex items-center space-x-2 text-sm text-gray-500">
+            <li>
+              <a href="/" class="hover:text-Iris transition-colors">Home</a>
+            </li>
+            <li><span class="mx-2 text-gray-400">/</span></li>
+            <li class="font-medium text-gray-700" aria-current="page">
+              How It Works
+            </li>
+          </ol>
+        </nav>
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900">
+          How Skill Match Works
+        </h1>
+        <p
+          class="mt-4 text-base sm:text-lg text-gray-600 text-center max-w-2xl mx-auto">
+          Your simple guide to finding reliable home service professionals and
+          offering your expert skills.
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="for-clients" class="py-12 md:py-16">
+        <h2
+          class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-10 md:mb-12">
+          For Clients
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-bullhorn fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              1. Post Your Job
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Describe your project needs, budget, and timeline for
+              electricians, plumbers, or any home service.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Post a Job
+            </a>
+          </article>
+
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              2. Review Proposals
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Compare quotes, profiles, and reviews from qualified service
+              providers who are interested in your job.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Browse Professionals
+            </a>
+          </article>
+
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              3. Hire & Pay Securely
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Select your chosen professional and manage payments securely
+              through our escrow system.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Learn About Payments
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <hr class="my-12 md:my-16 border-slate-200" />
+
+      <section id="for-providers" class="py-12 md:py-16">
+        <h2
+          class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-10 md:mb-12">
+          For Service Providers
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              1. Create Your Profile
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Showcase your skills, experience, and portfolio to attract clients
+              looking for your expertise.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Sign Up as Provider
+            </a>
+          </article>
+
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              2. Submit Proposals
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Apply to relevant jobs posted by clients with competitive quotes
+              and clear timelines.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Find Jobs
+            </a>
+          </article>
+
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <div class="mb-4 text-center">
+              <span
+                class="inline-block p-4 bg-Iris-light text-Iris rounded-full">
+                <i class="fa fa-money fa-2x" aria-hidden="true"></i>
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              3. Get Paid Securely
+            </h3>
+            <p class="text-gray-600 text-sm mb-6 text-center flex-grow">
+              Complete your work to a high standard and receive secure payments
+              promptly through our platform.
+            </p>
+            <a
+              href="#"
+              class="block w-full mt-auto text-center text-white bg-Iris hover:bg-Iris-dark px-6 py-3 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Payment Info
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <hr class="my-12 md:my-16 border-slate-200" />
+
+      <section id="verification-process" class="py-12 md:py-16">
+        <h2
+          class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-10 md:mb-12">
+          Our Verification Process
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <dl>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+              <dt class="text-lg font-semibold text-gray-900 mb-1">
+                Identity Verification
+              </dt>
+              <dd class="text-gray-600 text-sm">
+                We verify the identity of all service providers through secure
+                ID checks to build a trustworthy community.
+              </dd>
+            </div>
+            <div class="mt-4 p-6 bg-white rounded-lg shadow-md">
+              <dt class="text-lg font-semibold text-gray-900 mb-1">
+                License & Certification
+              </dt>
+              <dd class="text-gray-600 text-sm">
+                We confirm that professional licenses and certifications are
+                valid and current where applicable.
+              </dd>
+            </div>
+            <div class="mt-4 p-6 bg-white rounded-lg shadow-md">
+              <dt class="text-lg font-semibold text-gray-900 mb-1">
+                Client Reviews & Ratings
+              </dt>
+              <dd class="text-gray-600 text-sm">
+                Our transparent review and rating system helps you choose
+                professionals based on their past performance and client
+                feedback.
+              </dd>
+            </div>
+            <div class="mt-4 p-6 bg-white rounded-lg shadow-md">
+              <dt class="text-lg font-semibold text-gray-900 mb-1">
+                Background Checks
+              </dt>
+              <dd class="text-gray-600 text-sm">
+                Optional background checks are available for certain services,
+                offering an additional layer of peace of mind.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <hr class="my-12 md:my-16 border-slate-200" />
+
+      <section id="faq" class="py-12 md:py-16">
+        <h2
+          class="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-10 md:mb-12">
+          Frequently Asked Questions
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <details
+            class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <summary
+              class="flex justify-between items-center font-semibold text-gray-900 cursor-pointer text-lg list-none">
+              How do I know the service provider is qualified?
+              <i
+                class="fa fa-chevron-down text-Iris transform transition-transform duration-300 group-open:rotate-180"
+                aria-hidden="true"></i>
+            </summary>
+            <p
+              class="text-gray-600 text-sm mt-3 pt-3 border-t border-slate-200">
+              All providers undergo a verification process which includes
+              checking credentials where applicable. You can also review their
+              profiles, portfolios, client ratings, and past reviews to assess
+              their qualifications and experience.
+            </p>
+          </details>
+          <details
+            class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <summary
+              class="flex justify-between items-center font-semibold text-gray-900 cursor-pointer text-lg list-none">
+              What if I'm not satisfied with the work?
+              <i
+                class="fa fa-chevron-down text-Iris transform transition-transform duration-300 group-open:rotate-180"
+                aria-hidden="true"></i>
+            </summary>
+            <p
+              class="text-gray-600 text-sm mt-3 pt-3 border-t border-slate-200">
+              We encourage clear communication with your service provider
+              throughout the project. If issues arise, Skill Match offers a
+              dispute resolution process to help mediate. Additionally, payments
+              through our escrow system are only released upon your approval of
+              the completed work.
+            </p>
+          </details>
+          <details
+            class="group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <summary
+              class="flex justify-between items-center font-semibold text-gray-900 cursor-pointer text-lg list-none">
+              How does payment work?
+              <i
+                class="fa fa-chevron-down text-Iris transform transition-transform duration-300 group-open:rotate-180"
+                aria-hidden="true"></i>
+            </summary>
+            <p
+              class="text-gray-600 text-sm mt-3 pt-3 border-t border-slate-200">
+              Payments are handled securely through our platform. When you hire
+              a professional, the agreed amount is held in an escrow account.
+              Funds are released to the service provider only after you confirm
+              that the work has been completed to your satisfaction.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section
+        id="cta-final"
+        class="py-16 md:py-24 text-center bg-slate-100 my-16 rounded-xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Get Started?
+          </h2>
+          <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+            Whether you're looking for top-tier talent or seeking new
+            opportunities, Skill Match connects you with the right people.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a
+              href="./electrician-professionals.html"
+              class="text-white bg-Iris hover:bg-Iris-dark px-8 py-3.5 rounded-lg text-base font-semibold shadow-md hover:shadow-lg transition-all duration-150 ease-in-out transform hover:scale-105">
+              View Professionals
+            </a>
+            <a
+              href="./electrician-details.html"
+              class="text-Iris bg-white border border-Iris hover:bg-Iris-light px-8 py-3.5 rounded-lg text-base font-semibold shadow-md hover:shadow-lg transition-all duration-150 ease-in-out transform hover:scale-105">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-slate-300 py-12 mt-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h5 class="text-xl font-bold text-white mb-4">Skill Match</h5>
+            <p class="text-sm mb-4">
+              Connecting clients with skilled home service professionals quickly
+              and reliably.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Facebook"
+                ><i class="fa fa-facebook-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Twitter"
+                ><i class="fa fa-twitter-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="LinkedIn"
+                ><i class="fa fa-linkedin-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Instagram"
+                ><i class="fa fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">For Clients</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >How to Hire</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Post a Job</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Safety Tips</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >FAQ for Clients</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">For Providers</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >How to Find Work</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Create Profile</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Pro Guidelines</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >FAQ for Providers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">Company</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors">Press</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm">
+          <p>
+            &copy; <span id="currentYear"></span> Skill Match. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Basic Mobile Menu Toggle
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("icon-open");
+        const iconClose = document.getElementById("icon-close");
+
+        if (menuButton && mobileMenu && iconOpen && iconClose) {
+          menuButton.addEventListener("click", () => {
+            const isExpanded =
+              menuButton.getAttribute("aria-expanded") === "true";
+            menuButton.setAttribute("aria-expanded", !isExpanded);
+            mobileMenu.classList.toggle("hidden");
+            iconOpen.classList.toggle("hidden");
+            iconClose.classList.toggle("hidden");
+          });
+        }
+
+        // Set current year in footer
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

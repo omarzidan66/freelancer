@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-[Inter] bg-gray-50 text-gray-800">
+   <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="./Home.html"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors"
+              aria-label="Skill Match Home">
+              <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
+            </a>
+            <ul
+              class="hidden md:flex items-center space-x-2 lg:space-x-6 ml-8 lg:ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-Iris px-3 py-2 rounded-md text-base font-semibold transition-colors group"
+                  aria-current="page">
+                  <i
+                    class="fa fa-search mr-2 text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Emergency.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-plus-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+Emergency                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-info-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Categories
+            </a>
+            <a
+              href="#"
+              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+              href="#"
+              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-slate-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-Iris bg-slate-100 block px-3 py-3 rounded-md text-base font-semibold transition-colors group"
+              aria-current="page"
+              ><i
+                class="fa fa-search mr-3 text-Iris transition-colors"
+                aria-hidden="true"></i
+              >Find Talent</a
+            >
+          </li>
+          <li>
+            <a
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              >Emergency
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              ><i
+                class="fa fa-info-circle mr-3 text-gray-400 group-hover:text-Iris transition-colors"
+                aria-hidden="true"></i
+              >How it works</a
+            >
+          </li>
+          <li></li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Login</a
+            >
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="text-center py-10 bg-white shadow-sm">
+      <p class="text-sm text-gray-500">Home > Categories</p>
+      <h1 class="text-3xl font-bold mt-2">Home Service Professionals</h1>
+      <p class="text-sm mt-1">
+        Find verified local service providers for your home needs
+      </p>
+    </header>
+
+    <section class="py-8">
+      <div class="container mx-auto px-6">
+        <h2 class="text-lg font-semibold mb-4">Available Services</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- Electrician -->
+          <div class="bg-white p-5 rounded-lg shadow-md">
+            <i class="fa fa-bolt text-yellow-500 text-xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Electrician</h3>
+            <p class="text-sm text-gray-600">
+              Professional electrical installation
+            </p>
+            <div class="mt-4 flex gap-2">
+              <a
+                href="./electrician-professionals.html"
+                class="bg-indigo-600 text-white px-4 py-1 rounded text-sm"
+                >View Professionals</a
+              >
+              <a
+                href="./electrician-details.html"
+                class="bg-gray-200 text-indigo-600 px-4 py-1 rounded text-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <!-- Plumber -->
+          <div class="bg-white p-5 rounded-lg shadow-md">
+            <i class="fa fa-wrench text-blue-500 text-xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Plumber</h3>
+            <p class="text-sm text-gray-600">
+              Expert plumbing services for repair
+            </p>
+            <div class="mt-4 flex gap-2">
+              <a
+                href="./plumber-proffessionals.html"
+                class="bg-indigo-600 text-white px-4 py-1 rounded text-sm"
+                >View Professionals</a
+              >
+              <a
+                href="./plumbers-details.html"
+                class="bg-gray-200 text-indigo-600 px-4 py-1 rounded text-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Professionals Section -->
+    <section class="py-8 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-lg font-semibold mb-6">Top-Related Electricians</h2>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div
+            class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
+            <div class="flex items-center gap-4">
+              <img
+                src="../Images/man_profile.png"
+                class="w-12 h-12 rounded-full"
+                alt="" />
+              <div>
+                <p class="font-semibold">James Wilson</p>
+                <p class="text-sm text-gray-500">Electrician . 4.9 . $45/hr</p>
+              </div>
+            </div>
+            <div class="text-indigo-600">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
+            <div class="flex items-center gap-4">
+              <img
+                src="../Images/girl_profile.png"
+                class="w-12 h-12 rounded-full"
+                alt="" />
+              <div>
+                <p class="font-semibold">Robert Davis</p>
+                <p class="text-sm text-gray-500">Electrician . 4.8 . $50/hr</p>
+              </div>
+            </div>
+            <div class="text-indigo-600">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-lg font-semibold mt-10 mb-6">Top-Related Plumbers</h2>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div
+            class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
+            <div class="flex items-center gap-4">
+              <img
+                src="../Images/man_profile.png"
+                class="w-12 h-12 rounded-full"
+                alt="" />
+              <div>
+                <p class="font-semibold">Michael Chen</p>
+                <p class="text-sm text-gray-500">Plumber . 4.7 . $40/hr</p>
+              </div>
+            </div>
+            <div class="text-indigo-600">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
+            <div class="flex items-center gap-4">
+              <img
+                src="../Images/girl_profile.png"
+                class="w-12 h-12 rounded-full"
+                alt="" />
+              <div>
+                <p class="font-semibold">David Thompson</p>
+                <p class="text-sm text-gray-500">Plumber . 4.6 . $42/hr</p>
+              </div>
+            </div>
+            <div class="text-indigo-600">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 text-center">
+      <h2 class="text-xl font-bold mb-4">Need a custom service?</h2>
+      <a
+        href="#"
+        class="bg-indigo-600 text-white px-6 py-2 rounded-md text-sm font-medium"
+        >Post a Job</a
+      >
+    </section>
+    <footer class="bg-gray-800 text-slate-300 py-12 mt-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h5 class="text-xl font-bold text-white mb-4">Skill Match</h5>
+            <p class="text-sm mb-4">
+              Connecting clients with skilled home service professionals quickly
+              and reliably.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Facebook"
+                ><i class="fa fa-facebook-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Twitter"
+                ><i class="fa fa-twitter-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="LinkedIn"
+                ><i class="fa fa-linkedin-square fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-Iris transition-colors"
+                aria-label="Instagram"
+                ><i class="fa fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">For Clients</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >How to Hire</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Post a Job</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Safety Tips</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >FAQ for Clients</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">For Providers</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >How to Find Work</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Create Profile</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Pro Guidelines</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >FAQ for Providers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold text-white mb-4">Company</h6>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors">Press</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-Iris transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm">
+          <p>
+            &copy; <span id="currentYear"></span> Skill Match. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

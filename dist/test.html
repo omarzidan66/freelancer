@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+      /* 3. Define 'Iris' color (ideally in tailwind.config.js)
+           If not using a config file, you can add fallback custom properties
+           or utility classes here, but the config file is the recommended Tailwind way.
+        */
+      /* Example for if Iris is not in your config (not recommended for full Tailwind setup) */
+      /*
+        .text-Iris { color: #5A67D8; }
+        .bg-Iris { background-color: #5A67D8; }
+        .hover\:text-Iris:hover { color: #5A67D8; }
+        .hover\:text-Iris-dark:hover { color: #434190; }
+        .hover\:bg-Iris-dark:hover { background-color: #434190; }
+        .focus\:ring-Iris:focus {
+            --tw-ring-color: #5A67D8;
+            box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        }
+        */
+
+      /* Ensure your tailwind.config.js includes something like:
+        module.exports = {
+          theme: {
+            extend: {
+              colors: {
+                Iris: '#5A67D8', // Replace with your actual Iris color hex code
+                'Iris-dark': '#434190', // A darker shade for hover states
+              },
+            },
+          },
+          plugins: [],
+        }
+        */
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors">
+              Logo
+            </a>
+            <ul class="hidden md:flex items-baseline space-x-6 ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i
+                    class="fas fa-search mr-2 text-gray-500"
+                    aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i
+                    class="fas fa-plus-circle mr-2 text-gray-500"
+                    aria-hidden="true"></i>
+                  Post a Job
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i
+                    class="fas fa-info-circle mr-2 text-gray-500"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-4">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Browse Categories
+            </a>
+            <a
+              href="#"
+              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+              href="#"
+              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Signup
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-gray-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-search mr-3 text-gray-500"
+                aria-hidden="true"></i>
+              Find Talent
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-plus-circle mr-3 text-gray-500"
+                aria-hidden="true"></i>
+              Post a Job
+            </a>
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-info-circle mr-3 text-gray-500"
+                aria-hidden="true"></i>
+              How it works
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Browse Categories
+            </a>
+          </li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Signup
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-4">Page Title</h1>
+      <p class="mb-4">
+        Scroll down to see the sticky navigation bar in action.
+      </p>
+      <div class="h-screen bg-gray-200 p-4 mb-4">
+        Placeholder content (long)
+      </div>
+      <div class="h-screen bg-gray-300 p-4">More placeholder content</div>
+    </div>
+
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      mobileMenuButton.addEventListener("click", () => {
+        const isExpanded =
+          mobileMenuButton.getAttribute("aria-expanded") === "true" || false;
+        mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icons
+        iconOpen.classList.toggle("hidden");
+        iconOpen.classList.toggle("block"); // Ensure it becomes block if it was hidden (or vice-versa)
+        iconClose.classList.toggle("hidden");
+        iconClose.classList.toggle("block"); // Ensure it becomes block if it was hidden (or vice-versa)
+      });
+    </script>
+  </body>
+</html>

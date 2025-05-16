@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plumber Details</title>
+
+    <!--  font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- end font-awesome -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- end fonts -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-body">
+    
+    <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors">
+                      <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
+
+            </a>
+            <ul class="hidden md:flex items-baseline space-x-6 ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i class="fa fa-search mr-2" aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Emergency.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i
+                    class="fa fa-plus-circle mr-2 text-gray-500"
+                    aria-hidden="true"></i>
+Emergency
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  <i
+                    class="fa fa-exclamation mr-2 text-gray-500"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-4">
+           
+            <a
+              href="#"
+              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+              href="#"
+              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Signup
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-gray-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-search mr-3 text-gray-500"
+                aria-hidden="true"></i>
+              Find Talent
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-plus-circle mr-3 text-gray-500"
+                aria-hidden="true"></i>
+Emergency            </a>
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <i
+                class="fas fa-info-circle mr-3 text-gray-500"
+                aria-hidden="true"></i>
+              How it works
+            </a>
+          </li>
+          
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Signup
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+
+    <header class="relative w-full min-h-[300px]">
+      <p class="ml-10 pt-10 sm:text-sm text-xs">
+        <a href="./Home.html">Home</a> > Categories > Plumbers
+      </p>
+      <div class="ml-10 mr-10 mt-10">
+        <p class="text-3xl font-bold">Plumbers Services</p>
+        <img
+          class="rounded-md w-full mt-10 object-cover"
+          src="../Images/plumber-scaled.jpg"
+          alt="" />
+      </div>
+      <p class="text-xl font-medium mx-10 mt-5">Service Overview</p>
+      <p class="text-sm text-gray-500 mx-10 mt-5">
+        Our verified Plumbers provide professional Plumbers services for
+        residential and commercial properties. All professionals are licensed,
+        insured, and background-checked to ensure quality and safety.
+      </p>
+    </header>
+
+    <div class="relative mx-10 mt-10">
+      <p class="text-lg font-bold">Services Offered</p>
+      <div class="grid grid-rows-4 mt-5 gap-4">
+        <div class="grid grid-cols-12">
+          <div class="col-span-5 flex">
+            <i
+              class="fa fa-bolt flex justify-center items-center mr-3 rounded-xl text-Iris bg-slate-200 w-12 h-12"
+              aria-hidden="true"></i>
+            <div class="">
+              <p class="font-medium">Plumbers Installation</p>
+              <p class="text-sm">Lighting, outlets, panels, and fixtures</p>
+            </div>
+          </div>
+          <i
+            class="fa fa-arrow-right col-span-7 flex justify-end cursor-pointer"
+            aria-hidden="true"></i>
+        </div>
+        <div class="grid grid-cols-12">
+          <div class="col-span-5 flex">
+            <i
+              class="fa fa-wrench flex justify-center items-center mr-3 rounded-xl text-Iris bg-slate-200 w-12 h-12"
+              aria-hidden="true"></i>
+            <div class="">
+              <p class="font-medium">Plumbers Repairs</p>
+              <p class="text-sm">
+                Troubleshooting, vircuit fixes, and rewiring
+              </p>
+            </div>
+          </div>
+          <i
+            class="fa fa-arrow-right col-span-7 flex justify-end cursor-pointer"
+            aria-hidden="true"></i>
+        </div>
+        <div class="grid grid-cols-12">
+          <div class="col-span-5 flex">
+            <i
+              class="fa fa-list-alt flex justify-center items-center mr-3 rounded-xl text-Iris bg-slate-200 w-12 h-12"
+              aria-hidden="true"></i>
+            <div class="">
+              <p class="font-medium">Safety Inspections</p>
+              <p class="text-sm">
+                Code compliance, safety checks, and upgrades
+              </p>
+            </div>
+          </div>
+          <i
+            class="fa fa-arrow-right col-span-7 flex justify-end cursor-pointer"
+            aria-hidden="true"></i>
+        </div>
+        <div class="grid grid-cols-12">
+          <div class="col-span-5 flex">
+            <i
+              class="fa fa-asterisk flex justify-center items-center mr-3 rounded-xl text-Iris bg-slate-200 w-12 h-12"
+              aria-hidden="true"></i>
+            <div class="">
+              <p class="font-medium">Emergency Services</p>
+              <p class="text-sm">24/7 emergency repairs and troubleshooting</p>
+            </div>
+          </div>
+          <i
+            class="fa fa-arrow-right col-span-7 flex justify-end cursor-pointer"
+            aria-hidden="true"></i>
+        </div>
+      </div>
+      <p class="text-lg font-bold mt-10">Pricing</p>
+      <div class="grid grid-rows-6 mt-5">
+        <div class="grid grid-cols-12 border-b-2 border-gray-200">
+          <div class="col-span-6 flex items-center">
+            <i class="fa fa-money text-md mr-2 font-medium" aria-hidden="true">
+            </i>
+            <p>Service Type</p>
+          </div>
+          <p class="col-span-6 font-medium">Average Price Range</p>
+        </div>
+        
+
+      <div class="grid grid-cols-12 mt-2 mb-2 border-b-2 pb-2 border-gray-200">
+        <p class="col-span-6">Hourly Rate</p>
+
+        <p class="col-span-6">$40-60/hour</p>
+        
+      </div>
+     
+
+      <div class="grid grid-cols-12 mt-2 mb-2 border-b-2 pb-2 border-gray-200">
+        <p class="col-span-6">Small Jobs</p>
+
+        <p class="col-span-6">$80-150</p>
+      </div>
+
+      <div class="grid grid-cols-12 mt-2 mb-2 border-b-2 pb-2 border-gray-200">
+        <p class="col-span-6">Medium Projects</p>
+
+        <p class="col-span-6">$150-500</p>
+      </div>
+
+      <div class="grid grid-cols-12 mt-2 mb-2 border-b-2 pb-2 border-gray-200">
+        <p class="col-span-6">Large Installations</p>
+
+        <p class="col-span-6">$500-2000+</p>
+      </div>
+      <p class="text-sm text-gray-500"><em>*Actual prices may vary based on job complexity, and indiviual professional rates.</em></p>
+    </div>
+
+<div class="mb-16">
+  <p class="text-lg font-bold mb-5">Why Choose Our Electricans</p>
+  <div class="grid sm:grid-cols-2 sm:grid-rows-2 grid-rows-4 gap-3 gap-y-7">
+    <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+      <i class="fa fa-check-circle-o w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100" aria-hidden="true"></i>
+      <p class="text-lg font-medium mt-2">Quality</p>
+      <p class="text-lg font-bold mt-2">Verified Professionals</p>
+      <p class="text-sm text-gray-500 font-medium mt-2">All electricans are licensed, insured, and background-checked</p>
+    </div>
+    <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+      <i class="fa fa-thumbs-o-up w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100" aria-hidden="true"></i>
+      <p class="text-lg font-medium mt-2">Guarantee</p>
+      <p class="text-lg font-bold mt-2">Satisfaction Guarantee</p>
+      <p class="text-sm text-gray-500 font-medium mt-2">We stand behind the quality of our professionals work</p>
+    </div>
+    <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+      <i class="fa fa-usd w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100" aria-hidden="true"></i>
+      <p class="text-lg font-medium mt-2">Pricing</p>
+      <p class="text-lg font-bold mt-2">Transparent Pricing</p>
+      <p class="text-sm text-gray-500 font-medium mt-2">Clear upfront quotes with no hidden fees or surpises</p>
+    </div>
+    <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+      <i class="fa fa-shield w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100" aria-hidden="true"></i>
+      <p class="text-lg font-medium mt-2">Security</p>
+      <p class="text-lg font-bold mt-2">Secure Payments</p>
+      <p class="text-sm text-gray-500 font-medium mt-2">Protected payment system with release upon job completion</p>
+    </div>
+  </div>
+</div>
+<div class="mb-16">
+  <p class="text-xl font-bold flex justify-center mb-10">Ready to hire an Plumbers?</p>
+  <p class=" w-44 py-1 flex justify-center rounded-lg text-white bg-Iris mb-1"><a href="./plumber-proffessionals.html">view Professionals</a></p>
+  <p class=" w-44 py-1 flex justify-center rounded-lg text-Iris bg-slate-100">Post a Specific Job</p>
+</div>
+    <script src="../dist/NavBar.js"></script>
+  </body>
+</html>
+ 
