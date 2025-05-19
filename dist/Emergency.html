@@ -21,40 +21,44 @@
     <link href="../src/output.css" rel="stylesheet" />
   </head>
   <body class="font-body">
-    <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+     <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <div class="flex items-center">
             <a
-              href="#"
-              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors">
+              href="./Home.html"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors"
+              aria-label="Skill Match Home">
               <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
             </a>
-            <ul class="hidden md:flex items-baseline space-x-6 ml-10">
+            <ul
+              class="hidden md:flex items-center space-x-2 lg:space-x-6 ml-8 lg:ml-10">
               <li>
                 <a
                   href="./find-talent.html"
-                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
-                  <i class="fa fa-search mr-2" aria-hidden="true"></i>
+                  class="flex items-center text-gray-700 px-3 py-2 rounded-md text-base font-semibold transition-colors group"
+                  aria-current="page">
+                  <i
+                    class="fa fa-search mr-2 text-gray-700 transition-colors"
+                    aria-hidden="true"></i>
                   Find Talent
                 </a>
               </li>
               <li>
                 <a
                   href="./Emergency.html"
-                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  class="flex items-center text-Iris hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
                   <i
-                    class="fa fa-plus-circle mr-2 text-gray-500"
+                    class="fa fa-plus-circle mr-2 text-Iris group-hover:text-Iris transition-colors"
                     aria-hidden="true"></i>
-                  Emergency
-                </a>
+Emergency                </a>
               </li>
               <li>
                 <a
                   href="./how-it-works.html"
-                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors">
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
                   <i
-                    class="fa fa-exclamation mr-2 text-gray-500"
+                    class="fa fa-info-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
                     aria-hidden="true"></i>
                   How it works
                 </a>
@@ -62,7 +66,8 @@
             </ul>
           </div>
 
-          <div class="hidden md:flex items-center space-x-4">
+          <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+            
             <a
               href="#"
               class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
@@ -71,7 +76,7 @@
             <a
               href="#"
               class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
-              Signup
+              Sign Up
             </a>
           </div>
 
@@ -79,7 +84,7 @@
             <button
               id="mobile-menu-button"
               type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
               aria-controls="mobile-menu"
               aria-expanded="false">
               <span class="sr-only">Open main menu</span>
@@ -117,57 +122,48 @@
       </div>
 
       <div class="md:hidden hidden" id="mobile-menu">
-        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-gray-200">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-slate-200">
           <li>
             <a
               href="./find-talent.html"
-              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              <i
-                class="fas fa-search mr-3 text-gray-500"
-                aria-hidden="true"></i>
-              Find Talent
-            </a>
+              class="flex items-center text-Iris bg-slate-100 block px-3 py-3 rounded-md text-base font-semibold transition-colors group"
+              aria-current="page"
+              ><i
+                class="fa fa-search mr-3 text-Iris transition-colors"
+                aria-hidden="true"></i
+              >Find Talent</a
+            >
           </li>
           <li>
             <a
-              href="#"
-              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              <i
-                class="fas fa-plus-circle mr-3 text-gray-500"
-                aria-hidden="true"></i>
-              <a href="./Emergency.html"> Emergency </a>
-            </a>
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              >Emergency
           </li>
           <li>
             <a
               href="./how-it-works.html"
-              class="flex items-center text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              <i
-                class="fas fa-info-circle mr-3 text-gray-500"
-                aria-hidden="true"></i>
-              How it works
-            </a>
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              ><i
+                class="fa fa-info-circle mr-3 text-gray-400 group-hover:text-Iris transition-colors"
+                aria-hidden="true"></i
+              >How it works</a
+            >
           </li>
-          <li>
-            <a
-              href="#"
-              class="text-gray-700 hover:text-Iris hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Browse Categories
-            </a>
-          </li>
+          <li></li>
           <li class="pt-2">
             <a
               href="#"
-              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
-              Login
-            </a>
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Login</a
+            >
           </li>
           <li class="pt-1">
             <a
               href="#"
-              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
-              Signup
-            </a>
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Sign Up</a
+            >
           </li>
         </ul>
       </div>
