@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency</title>
+    <!--  font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- end font-awesome -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- end fonts -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-body">
+     <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="./Home.html"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors"
+              aria-label="Skill Match Home">
+              <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
+            </a>
+            <ul
+              class="hidden md:flex items-center space-x-2 lg:space-x-6 ml-8 lg:ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-gray-700 px-3 py-2 rounded-md text-base font-semibold transition-colors group"
+                  aria-current="page">
+                  <i
+                    class="fa fa-search mr-2 text-gray-700 transition-colors"
+                    aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Emergency.html"
+                  class="flex items-center text-Iris hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-plus-circle mr-2 text-Iris group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+Emergency                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-info-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+            
+            <a
+href="../signin&signup/signin&signup.html"              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+href="../signin&signup/signin&signup.html"              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-slate-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-Iris bg-slate-100 block px-3 py-3 rounded-md text-base font-semibold transition-colors group"
+              aria-current="page"
+              ><i
+                class="fa fa-search mr-3 text-Iris transition-colors"
+                aria-hidden="true"></i
+              >Find Talent</a
+            >
+          </li>
+          <li>
+            <a
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              >Emergency
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              ><i
+                class="fa fa-info-circle mr-3 text-gray-400 group-hover:text-Iris transition-colors"
+                aria-hidden="true"></i
+              >How it works</a
+            >
+          </li>
+          <li></li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Login</a
+            >
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+    <header class="w-full mb-5">
+      <p class="ml-10 pt-10 sm:text-sm text-xs">
+        <a href="./Home.html">Home</a> > Emergency
+      </p>
+    </header>
+    <div class="mx-10">
+      <div class="p-4 space-y-6">
+        <!-- Title -->
+        <h2 class="text-2xl font-bold">24/7 Emergency Electrical Services</h2>
+
+        <!-- Image -->
+        <div class="rounded-lg overflow-hidden">
+          <img
+            src="../Images/emergency-red-siren-or-rescue-design-free-vector.jpg"
+            alt="Ambulance Emergency"
+            class="w-full h-[350px]" />
+        </div>
+
+        <!-- Subheading -->
+        <h3 class="text-xl font-semibold">Immediate Response Available</h3>
+
+        <!-- Description -->
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Our emergency electricians are available 24/7 to address urgent
+          electrical issues that pose safety risks or disrupt your home or
+          business operations. We prioritize emergency calls and dispatch the
+          nearest qualified professional to your location.
+        </p>
+      </div>
+    </div>
+    <div class="mx-10">
+      <div class="p-6 space-y-10">
+        <!-- Common Emergency Situations -->
+        <div>
+          <h2 class="text-xl font-semibold mb-4">
+            Common Emergency Situations
+          </h2>
+          <ul class="space-y-4 text-sm text-gray-700">
+            <li class="flex items-start gap-4">
+              <div class="p-2 rounded-full bg-violet-100 text-Iris">⚡</div>
+              <div>
+                <p class="font-semibold">Power Outages</p>
+                <p class="text-gray-500">
+                  Partial or complete loss of electricity
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="p-2 rounded-full bg-violet-100 text-Iris">🔥</div>
+              <div>
+                <p class="font-semibold">Electrical Fires</p>
+                <p class="text-gray-500">
+                  Burning smells, smoke, or visible sparks
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="p-2 rounded-full bg-violet-100 text-Iris">🐍</div>
+              <div>
+                <p class="font-semibold">Exposed Wiring</p>
+                <p class="text-gray-500">
+                  Damaged cables creating shock hazards
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="p-2 rounded-full bg-violet-100 text-Iris">💡</div>
+              <div>
+                <p class="font-semibold">Circuit Breaker Issues</p>
+                <p class="text-gray-500">
+                  Repeatedly tripping breakers or blown fuses
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Emergency Response Process -->
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Emergency Response Process</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <!-- Step 1 -->
+            <div class="p-4 rounded-xl bg-violet-50">
+              <div class="flex items-center gap-2 text-Iris mb-2">
+                📞
+                <span class="text-xs uppercase font-medium">Step 1</span>
+              </div>
+              <p class="font-semibold">1. Contact</p>
+              <p class="text-gray-600">
+                Call our emergency line or request through the app for immediate
+                assistance
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="p-4 rounded-xl bg-violet-50">
+              <div class="flex items-center gap-2 text-Iris mb-2">
+                📍
+                <span class="text-xs uppercase font-medium">Step 2</span>
+              </div>
+              <p class="font-semibold">2. Dispatch</p>
+              <p class="text-gray-600">
+                We’ll connect you with the nearest available electrician
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="p-4 rounded-xl bg-violet-50">
+              <div class="flex items-center gap-2 text-Iris mb-2">
+                🔍
+                <span class="text-xs uppercase font-medium">Step 3</span>
+              </div>
+              <p class="font-semibold">3. Assessment</p>
+              <p class="text-gray-600">
+                Professional evaluates the situation and explains required work
+              </p>
+            </div>
+            <!-- Step 4 -->
+            <div class="p-4 rounded-xl bg-violet-50">
+              <div class="flex items-center gap-2 text-Iris mb-2">
+                🛠️
+                <span class="text-xs uppercase font-medium">Step 4</span>
+              </div>
+              <p class="font-semibold">4. Resolution</p>
+              <p class="text-gray-600">
+                Immediate repairs to address the emergency situation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-10">
+      <div class="p-6 space-y-10">
+        <!-- Emergency Service Pricing -->
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Emergency Service Pricing</h2>
+          <table
+            class="w-full table-auto text-sm text-left border-separate border-spacing-y-2">
+            <thead class="text-gray-700 font-medium">
+              <tr>
+                <th class="pb-2">Service</th>
+                <th class="pb-2">Price Range</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-800">
+              <tr>
+                <td class="py-2">Emergency Call-Out Fee</td>
+                <td class="py-2">$75–150</td>
+              </tr>
+              <tr>
+                <td class="py-2">After-Hours Hourly Rate</td>
+                <td class="py-2">$80–120/hour</td>
+              </tr>
+              <tr>
+                <td class="py-2">Weekend/Holiday Rate</td>
+                <td class="py-2">$100–150/hour</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-xs text-gray-500 mt-2 italic">
+            *Additional costs may apply depending on parts needed and complexity
+            of the emergency repair.
+          </p>
+        </div>
+
+        <!-- Safety First Alert -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Safety First</h3>
+          <div
+            class="bg-orange-100 text-orange-800 text-sm p-4 rounded-md border-l-4 border-orange-500">
+            <p>
+              <strong
+                >If you smell burning, see smoke, or suspect an electrical
+                fire</strong
+              >, evacuate immediately and call emergency services (911) before
+              contacting our electricians.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center space-y-4">
+          <h3 class="text-lg font-semibold">
+            Need emergency electrical help now?
+          </h3>
+          <div class="flex justify-center gap-4 flex-wrap">
+            <button
+              class="bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-violet-700">
+              Call Emergency Line
+            </button>
+            <button
+              class="bg-violet-100 text-violet-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-violet-200">
+              Request Emergency Service
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../dist/NavBar.js"></script>
+  </body>
+</html>

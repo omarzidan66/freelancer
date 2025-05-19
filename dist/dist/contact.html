@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <!--  font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- end font-awesome -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- end fonts -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-body">
+    <nav class="bg-white shadow-lg w-full sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+            <a
+              href="./Home.html"
+              class="flex-shrink-0 text-2xl font-bold text-Iris hover:text-Iris-dark transition-colors"
+              aria-label="Skill Match Home">
+              <img class="w-20 h-20" src="../Images/enhanced_logo.png" alt="" />
+            </a>
+            <ul
+              class="hidden md:flex items-center space-x-2 lg:space-x-6 ml-8 lg:ml-10">
+              <li>
+                <a
+                  href="./find-talent.html"
+                  class="flex items-center text-gray-700 px-3 py-2 rounded-md text-base font-semibold transition-colors group"
+                  aria-current="page">
+                  <i
+                    class="fa fa-search mr-2 text-gray-700 transition-colors"
+                    aria-hidden="true"></i>
+                  Find Talent
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Emergency.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-plus-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+Emergency                </a>
+              </li>
+              <li>
+                <a
+                  href="./how-it-works.html"
+                  class="flex items-center text-gray-700 hover:text-Iris px-3 py-2 rounded-md text-base font-medium transition-colors group">
+                  <i
+                    class="fa fa-info-circle mr-2 text-gray-400 group-hover:text-Iris transition-colors"
+                    aria-hidden="true"></i>
+                  How it works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-3 lg:space-x-4">
+            
+            <a
+href="../signin&signup/signin&signup.html"              class="text-Iris hover:text-Iris-dark bg-slate-100 hover:bg-slate-200 px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Login
+            </a>
+            <a
+href="../signin&signup/signin&signup.html"              class="text-white bg-Iris hover:bg-Iris-dark px-5 py-2.5 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all duration-150 ease-in-out">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-Iris hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Iris transition-all"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-4 space-y-1 sm:px-3 border-t border-slate-200">
+          <li>
+            <a
+              href="./find-talent.html"
+              class="flex items-center text-Iris bg-slate-100 block px-3 py-3 rounded-md text-base font-semibold transition-colors group"
+              aria-current="page"
+              ><i
+                class="fa fa-search mr-3 text-Iris transition-colors"
+                aria-hidden="true"></i
+              >Find Talent</a
+            >
+          </li>
+          <li>
+            <a
+              href="./Emergency.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              >Emergency
+          </li>
+          <li>
+            <a
+              href="./how-it-works.html"
+              class="flex items-center text-gray-700 hover:text-Iris hover:bg-slate-50 block px-3 py-3 rounded-md text-base font-medium transition-colors group"
+              ><i
+                class="fa fa-info-circle mr-3 text-gray-400 group-hover:text-Iris transition-colors"
+                aria-hidden="true"></i
+              >How it works</a
+            >
+          </li>
+          <li></li>
+          <li class="pt-2">
+            <a
+              href="#"
+              class="block w-full text-center text-Iris bg-slate-100 hover:bg-slate-200 px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Login</a
+            >
+          </li>
+          <li class="pt-1">
+            <a
+              href="#"
+              class="block w-full text-center text-white bg-Iris hover:bg-Iris-dark px-5 py-3 rounded-lg text-base font-semibold shadow-sm hover:shadow-md transition-all"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <hr />
+    <header class="h-48 ml-10">
+      <p class="pt-10 sm:text-sm text-xs">
+        <a href="./Home.html">Home</a> >
+        <a href="./find-talent.html">Find Talent</a> > Contact
+      </p>
+      <p class="flex justify-start sm:text-3xl font-bold pb-6">
+        Contact James Wilson
+      </p>
+      <p class="flex justify-start sm:text-sm text-xs">
+        Residental electrician with 10 years of experience in residential and
+        commercial
+      </p>
+    </header>
+    <section class="mx-10">
+      <div class="mb-16">
+        <div
+          class="grid sm:grid-cols-2 sm:grid-rows-1 grid-rows-2 gap-3 gap-y-7">
+          <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+            <i
+              class="fa fa-check-circle-o w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100"
+              aria-hidden="true"></i>
+            <p class="text-lg font-bold mt-2">James Wilson</p>
+            <p class="text-md font-medium mt-2">
+              4.7 <i class="fa fa-star" aria-hidden="true"></i> (124 reviews)
+            </p>
+            <p class="text-sm text-gray-500 font-medium mt-2">
+              Usually responds within 2 hours
+            </p>
+          </div>
+          <div class="bg-slate-200 rounded-lg h-48 pl-5 py-5">
+            <i
+              class="fa fa-thumbs-o-up w-10 h-10 text-xl flex justify-center items-center rounded-full text-Iris bg-slate-100"
+              aria-hidden="true"></i>
+            <p class="text-lg font-medium mt-2">Service Details</p>
+            <p class="text-sm text-gray-500 font-medium mt-2">
+              Residental electrician specializing in wiring, Installations, and
+              repairs. Available for emergency services
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mx-10">
+      <p class="text-xl font-bold mb-5">Project Details</p>
+      <div class="">
+        <div class="">
+          <label class="font-medium">Project Title</label>
+          <input
+            type="text"
+            placeholder="Kitchen Rewiring, Light Fixture Installation"
+            class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+        </div>
+        <div class="mb-2">
+          <label class="font-medium">Project Description</label>
+          <input
+            type="text"
+            placeholder="Describe your electrical needs in detail"
+            class="rounded-md bg-slate-200 w-full mt-2 p-2 h-40 placeholder:flex placeholder:absolute placeholder:top-0 placeholder:p-2" />
+        </div>
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-3 mb-3">
+          <div>
+            <label class="font-medium">Location</label>
+            <div class="flex">
+              <input
+                type="text"
+                placeholder="Enter Your Address"
+                class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+              <i
+                class="fa fa-map-marker flex justify-center items-center relative right-5"
+                aria-hidden="true"></i>
+            </div>
+          </div>
+          <div>
+            <label class="font-medium">Preferred Date</label>
+            <input
+              type="date"
+              placeholder="Select Date"
+              class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+          </div>
+        </div>
+        <p class="text-xl font-bold mb-5">Contact Information</p>
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-3 mb-3">
+          <div>
+            <label class="font-medium">Full Name</label>
+            <div class="flex">
+              <input
+                type="text"
+                placeholder="Your Full Name"
+                class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+            </div>
+          </div>
+          <div>
+            <label class="font-medium">Email</label>
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+          </div>
+        </div>
+        <div class="mb-5">
+          <label class="font-medium">Phone Number</label>
+          <input
+            type="text"
+            placeholder="Your Phone Number"
+            class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+        </div>
+        <p class="text-xl font-bold mb-5">Budget</p>
+        <div class="sm:flex mb-3 gap-3">
+          <button
+            class="w-fit rounded-xl flex justify-center items-center bg-slate-200 py-2 px-3 hover:bg-[#3E82E7]">
+            Hourly Rate
+          </button>
+          <button
+            class="w-fit rounded-xl flex justify-center items-center bg-slate-200 py-2 px-3 hover:bg-[#3E82E7]">
+            Fixed Price
+          </button>
+          <button
+            class="w-fit rounded-xl flex justify-center items-center bg-slate-200 py-2 px-3 hover:bg-[#3E82E7]">
+            To be discussed
+          </button>
+        </div>
+        <div class="mb-5">
+          <label class="font-medium">Budget Amount ($)</label>
+          <input
+            type="text"
+            placeholder="Enter your budget"
+            class="rounded-md bg-slate-200 w-full h-10 mt-2 p-2" />
+        </div>
+        <button
+          class="w-fit rounded-xl flex justify-center items-center bg-slate-200 py-2 px-3">
+          Upload Files (optional)
+        </button>
+        <div class="flex my-4">
+          <button class="bg-Iris rounded-lg px-3 py-2 sm:text-sm text-white">
+            <a href="./electrician-professionals.html">Send Message</a>
+          </button>
+          <button
+            class="bg-slate-300 rounded-lg ml-2 px-3 py-2 sm:text-sm text-black">
+            <a href="./electrician-details.html">Cancel</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="../dist/NavBar.js"></script>
+  </body>
+</html>
